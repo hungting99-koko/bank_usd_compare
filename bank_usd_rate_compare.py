@@ -317,7 +317,7 @@ def main():
         buy_sorted_df.style.format({col: "{:.4f}" for col in buy_price_cols}, na_rep="-").highlight_min(
             subset=["我們的買入成本"], color="#c6f6c6"
         ),
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
         column_config={
             "官網連結": st.column_config.LinkColumn("官網連結", display_text="🔗 前往查詢"),
@@ -351,7 +351,7 @@ def main():
         sell_sorted_df.style.format({col: "{:.4f}" for col in sell_price_cols}, na_rep="-").highlight_max(
             subset=["我們的賣出收入"], color="#c6f6c6"
         ),
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
         column_config={
             "官網連結": st.column_config.LinkColumn("官網連結", display_text="🔗 前往查詢"),
